@@ -1,0 +1,11 @@
+Model Information:
+* title:	CZ Hammer Classic
+* source:	https://sketchfab.com/3d-models/cz-hammer-classic-fc3f6a51f1074baaa2740eb6882883c3
+* author:	Cameron Pink (https://sketchfab.com/cameronpink)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "CZ Hammer Classic" (https://sketchfab.com/3d-models/cz-hammer-classic-fc3f6a51f1074baaa2740eb6882883c3) by Cameron Pink (https://sketchfab.com/cameronpink) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

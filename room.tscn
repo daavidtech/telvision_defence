@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20156, 7.30896, 5.81859 )
+invert_faces = true
+width = 48.1312
+height = 18.798
+depth = 56.1802
+material = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="CSGBox"]
+transform = Transform( 0.999312, -0.00804168, 0.0362117, 0.00847318, 0.999895, -0.0117783, -0.0361132, 0.012077, 0.999275, 5, 22.9185, 42.3991 )
+fov = 85.4424
+far = 200.0
+
+[node name="CSGMesh" type="CSGMesh" parent="CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.98792 )
