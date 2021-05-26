@@ -1,9 +1,22 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://seppo.tscn" type="PackedScene" id=1]
-[ext_resource path="res://even_better_room.gd" type="Script" id=3]
 [ext_resource path="res://123455ytrrwewdfrgdfgnh.glb" type="PackedScene" id=4]
 [ext_resource path="res://nigga2.tscn" type="PackedScene" id=5]
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Spatial
+
+onready var nigga = $nigga
+
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+#func _process(delta):
+#	if nigga != null and nigga.is_queued_for_deletion() == false:
+#		print(nigga)
+#		nigga.translation.z += 0.01
+"
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 5, 8 )
@@ -12,7 +25,7 @@ size = Vector2( 5, 8 )
 points = PoolVector3Array( 2.5, 0, 4, -2.5, 0, 4, 2.5, 0, -4, -2.5, 0, -4 )
 
 [node name="Spatial" type="Spatial"]
-script = ExtResource( 3 )
+script = SubResource( 3 )
 
 [node name="room" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.04062, -1.97121 )
