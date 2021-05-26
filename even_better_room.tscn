@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://seppo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://even_better_room.gd" type="Script" id=3]
+[ext_resource path="res://123455ytrrwewdfrgdfgnh.glb" type="PackedScene" id=4]
+[ext_resource path="res://nigga2.tscn" type="PackedScene" id=5]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 5, 8 )
+
+[sub_resource type="ConvexPolygonShape" id=2]
+points = PoolVector3Array( 2.5, 0, 4, -2.5, 0, 4, 2.5, 0, -4, -2.5, 0, -4 )
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="room" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.04062, -1.97121 )
+invert_faces = true
+width = 4.34154
+height = 2.09126
+depth = 6.32758
+
+[node name="seppo" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.999567, 0, -0.0294045, 0, 1, 0, 0.0294045, 0, 0.999567, 0.00928092, 0.563418, 0.201085 )
+
+[node name="123455ytrrwewdfrgdfgnh" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.205147, 0.0750989, -2.99413 )
+
+[node name="Area" type="Area" parent="."]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0378103, -0.0460744, -1.68967 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0378103, -0.0460744, -1.68967 )
+shape = SubResource( 2 )
+
+[node name="BLACK_test1" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.00857187, 0, -0.149755, 0, 0.15, 0, 0.149755, 0, 0.00857187, 1.23287, 0.279485, -2.00148 )

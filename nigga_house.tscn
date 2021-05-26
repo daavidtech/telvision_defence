@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://NOGNIGhouse_1.glb" type="PackedScene" id=1]
+[ext_resource path="res://seppo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://nigga_house.gd" type="Script" id=5]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 20, 20 )
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 5 )
+
+[node name="NOGNIGhouse_1" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -3.19729, -0.353928, -3.50418 )
+
+[node name="seppo" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.999799, 0, 0.0200524, -0.000324068, 0.999869, -0.0161578, -0.0200498, -0.0161611, -0.999668, -3.37014, 1.29552, -6.75654 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.444513, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.61976, -0.732414, -4.319 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="spawn_point" type="Position3D" parent="."]
+transform = Transform( -0.999717, 0, 0.0237866, 0, 1, 0, -0.0237866, 0, -0.999717, -2.27627, 0.0547955, 4.37202 )
+
+[node name="spawn_point2" type="Position3D" parent="."]
+transform = Transform( -0.999717, 0, 0.0237866, 0, 1, 0, -0.0237866, 0, -0.999717, -5.04748, -0.252674, 4.3111 )
+
+[node name="SpawnTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
